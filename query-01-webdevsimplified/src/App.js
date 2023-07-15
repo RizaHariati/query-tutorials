@@ -7,9 +7,19 @@ import Post from "./components/Post";
 import CreatePost from "./components/CreatePost";
 import PostListPaginated from "./components/PostListPaginated";
 import PostListInfinite from "./components/PostListInfinite";
+import { useQueryClient } from "@tanstack/react-query";
+import { getPost2 } from "./api/posts";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(<PostList1 />);
+  const queryClient = useQueryClient();
+  function onHoverPostTwoLink() {
+    queryClient.prefetchQuery({
+      queryKey: ["posts", 1],
+      queryFn: () => getPost2(1),
+    });
+    return;
+  }
   return (
     <div>
       <h1>Tansack Query</h1>
@@ -20,7 +30,10 @@ function App() {
         <button onClick={() => setCurrentPage(<PostList2 />)}>
           Post List 2
         </button>
-        <button onClick={() => setCurrentPage(<Post id={1} />)}>
+        <button
+          onMouseEnter={onHoverPostTwoLink}
+          onClick={() => setCurrentPage(<Post id={1} />)}
+        >
           First Post
         </button>
         <button

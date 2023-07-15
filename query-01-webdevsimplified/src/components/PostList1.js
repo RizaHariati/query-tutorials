@@ -1,11 +1,20 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQueries, useQuery } from "@tanstack/react-query";
 import React from "react";
-import { getPost } from "../api/posts";
+import { getPost, getPost2, getUser } from "../api/posts";
 
 const PostList1 = () => {
   const postQuery = useQuery({
     queryKey: ["posts"],
     queryFn: getPost,
+  });
+
+  const queries = useQueries({
+    queries: (postQuery?.data ? postQuery?.data : []).map((post) => {
+      return {
+        queryKey: ["posts", post.id],
+        queryFn: () => getPost2(post.id),
+      };
+    }),
   });
 
   if (postQuery.status === "loading") {
@@ -19,9 +28,13 @@ const PostList1 = () => {
     <div>
       <h1>PostList1</h1>
       <ol>
-        {postQuery.data.slice(0, 5).map((item) => {
-          const { id, title } = item;
-          return <li key={id}>{title}</li>;
+        {queries.map((item, index) => {
+          return (
+            <li key={index}>
+              <h3>{item?.data?.title}</h3>
+              <p>{item?.data?.body}</p>
+            </li>
+          );
         })}
       </ol>
     </div>

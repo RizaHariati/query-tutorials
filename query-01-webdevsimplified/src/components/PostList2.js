@@ -6,6 +6,7 @@ const PostList2 = () => {
   const postQuery = useQuery({
     queryKey: ["posts"],
     queryFn: getPost,
+    placeholderData: [{ id: 0, title: "bla bla" }],
   });
 
   if (postQuery.status === "loading2") {
