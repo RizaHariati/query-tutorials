@@ -1,7 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { useParams } from "react-router-dom";
-import { getData2 } from "../util";
 import { useSingleHeroesData } from "../hooks/useSingleHeroesData";
 
 const Heroes = () => {

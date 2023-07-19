@@ -1,47 +1,98 @@
 {
-    "superheroes": [
-        {
-            "id": 1,
-            "name": "Batman",
-            "alterEgo": "Bruce Wayne"
-        },
-        {
-            "id": 2,
-            "name": "Supermaassdn",
-            "alterEgo": "Clark Kent"
-        },
-        {
-            "id": 3,
-            "name": "Wonder Woman22",
-            "alterEgo": "Princess Diana"
-        },
-        {
-            "id": 4,
-            "name": "Batman",
-            "alterEgo": "Bruce Wayne"
-        },
-        {
-            "id": 5,
-            "name": "Superman",
-            "alterEgo": "Clark Kent"
-        }
-    ],
-    "friends": [
-        {
-            "id": 6,
-            "name": "Chandler Bing"
-        },
-        {
-            "id": 7,
-            "name": "Joey Tribiani"
-        },
-        {
-            "id": 8,
-            "name": "Monica Geller"
-        },
-        {
-            "id": 9,
-            "name": "Rachel Green"
-        }
-    ]
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Supermaassdn",
+      "alterEgo": "Clark Kent"
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman22",
+      "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "Shazam",
+      "alterEgo": "Billy Batson",
+      "id": 4
+    },
+    {
+      "name": "Spiderman",
+      "alterEgo": "Peter Parker",
+      "id": 5
+    },
+    {
+      "name": "Cat Woman",
+      "alterEgo": "Selina Kyle",
+      "id": 6
+    }
+  ],
+  "friends": [
+    {
+      "id": 6,
+      "name": "Chandler Bing"
+    },
+    {
+      "id": 7,
+      "name": "Joey Tribiani"
+    },
+    {
+      "id": 8,
+      "name": "Monica Geller"
+    },
+    {
+      "id": 9,
+      "name": "Rachel Green"
+    }
+  ],
+  "users": [
+    {
+      "id": "vishnu@gmail.com",
+      "channelId": "codeevolution"
+    }
+  ],
+  "channels": [
+    {
+      "id": "codeevolution",
+      "course": [
+        "react",
+        "vue",
+        "angular"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "name": "merah"
+    },
+    {
+      "id": 2,
+      "name": "jingga"
+    },
+    {
+      "id": 3,
+      "name": "hijau"
+    },
+    {
+      "id": 4,
+      "name": "biru"
+    },
+    {
+      "id": 5,
+      "name": "nila"
+    },
+    {
+      "id": 6,
+      "name": "ungu"
+    },
+    {
+      "id": 7,
+      "name": "putih"
+    }
+  ]
 }

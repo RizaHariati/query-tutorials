@@ -1,6 +1,6 @@
 import { useQueries } from "@tanstack/react-query";
 import React from "react";
-import { getData2 } from "../util";
+import { getData2 } from "../utils/util";
 
 const RqParallel = ({ arrayIds }) => {
   const queries = useQueries({

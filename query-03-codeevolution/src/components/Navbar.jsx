@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-links">
-        <Link to={"/"} className="link">
+        <Link to={"/"} className="links">
           <p>Home Page</p>
         </Link>
         <div className="links">
@@ -17,6 +17,15 @@ const Navbar = () => {
           </Link>
           <Link to="/rq-parallel">
             <p>RQ Parallel</p>
+          </Link>
+          <Link to="/dependant">
+            <p>Dependant</p>
+          </Link>
+          <Link to="/paginated">
+            <p>Paginated</p>
+          </Link>
+          <Link to="/infinite">
+            <p>Infinite</p>
           </Link>
         </div>
       </div>

@@ -11,6 +11,9 @@ import RqSuperheroes from "./routes/rq-superheroes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Heroes from "./routes/heroID";
 import RqParallel from "./routes/rq-parallel";
+import DependentQueries from "./routes/dependentQueries";
+import Paginated from "./routes/paginated";
+import Infinite from "./routes/infinite";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,18 @@ const router = createBrowserRouter([
       {
         path: "rq-superheroes/:heroID",
         element: <Heroes />,
+      },
+      {
+        path: "dependant",
+        element: <DependentQueries email="vishnu@gmail.com" />,
+      },
+      {
+        path: "paginated",
+        element: <Paginated />,
+      },
+      {
+        path: "infinite",
+        element: <Infinite />,
       },
     ],
   },
